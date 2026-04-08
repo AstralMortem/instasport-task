@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+env = os.getenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lo=9novgfi#zfs+pab-d583hw6a41n#c62+40n=sab!7napb35'
+SECRET_KEY = env("SECRET_KEY", 'django-insecure-lo=9novgfi#zfs+pab-d583hw6a41n#c62+40n=sab!7napb35')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DEBUG", False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
@@ -76,8 +79,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'instasport.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+# For test purpose and free use, we will not use postgresql
 
 DATABASES = {
     'default': {
