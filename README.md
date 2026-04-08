@@ -1,3 +1,6 @@
-Deployment: https://instasport-task.vercel.app/
 
-GraphQL endpoint: https://instasport-task.vercel.app/graphql/
+For deployment was choosen render.com, because another services cannot provide sqlite database storage as file.
+
+Deployment: https://instasport-task.onrender.com/
+
+GraphQL endpoint: https://instasport-task.onrender.com/graphql/

@@ -8,4 +8,5 @@ dependencies = [
     "django>=6.0.4",
     "graphene-django>=3.2.3",
     "gunicorn>=25.3.0",
+    "whitenoise>=6.12.0",
 ]
