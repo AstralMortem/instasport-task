@@ -28,7 +28,7 @@ SECRET_KEY = env("SECRET_KEY", 'django-insecure-lo=9novgfi#zfs+pab-d583hw6a41n#c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG", False)
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = env("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 
 # Application definition
